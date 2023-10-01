@@ -9,16 +9,17 @@ class Program
         do
         {
             choice = user.UserChoice();
+
             switch (choice)
             {
                 case '1': user.UserCreation(); break;
-                case '3':
-                    Console.WriteLine("\n" +
-                                      "\n" +
-                                      "User information: ");
-                    Console.WriteLine(user.UserInfo()); break;
+                case '2': user.UserDel(); break;
+                case '3': user.UserInfo(); break;
+                case '4': user.UserModification(); break;
+                case '5': user.UserChanger(); break;
+                case '6': user.UserExiting(); break;
+                default: Console.WriteLine("\nInvalid choice input."); break;
             }
-        } while (choice != '4');
-        if (choice == '4') { Console.WriteLine('\n' + "Exiting..."); }
+        } while (choice != '6');
     }
 }
